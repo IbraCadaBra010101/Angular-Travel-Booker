@@ -1,0 +1,47 @@
+<!--<div class="card">-->
+<!--<div class="card-body">-->
+<!--<h5 class="card-title"> show this</h5>-->
+<!--<p class="card-text"> and this</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<p>{{attraction.info}}</p>-->
+
+<div class="container">
+
+
+<div class="card" *ngIf="cities; else defaults">
+  <div class="card-body">
+    <div *ngFor="let continent of continents">
+      <p *ngIf="continent.info === cities.continent ">{{continent.info}}</p>
+    </div>
+    <h2 class="card-title">{{cities.name}}</h2>
+    <p>{{cities.info}}</p>
+    <div *ngFor="let attraction of cityAttractions">
+      <p class="card-text" *ngIf="cities.name == attraction.cityName">{{attraction.info}}</p>
+    </div>
+  </div>
+</div>
+
+
+<ng-template class="card" #defaults>
+  <div class="card">
+    <div class="card-body">
+      <p>Europa</p>
+      <h2 class="card-title">Rom</h2>
+      <p class="card-text">Rom bjuder på mer än Colosseum och Vatikanen. Den senaste tiden har
+        många nya barer och restauranger öppnat och romarna är fulla av energi
+        och visar att den antika staden inte bara består av gamla klassiker.
+        Här finns också mycket att se för den som är intresserad av mode och
+        arkitektur, långt ifrån de mest uppenbara attraktionerna. Ett exempel är
+        modehuset Fendis nya högkvarter i det kvadratformade Colosseum. Eller den
+        för detta el- och gascentralen Montemartini som har en av stadens största
+        samlingar av romerska statyer.
+        Eller ät på Il Mazzo, en av Italiens mest innovativa restauranger.
+      </p>
+      <p>Colosseeum, Vatikanen</p>
+    </div>
+  </div>
+</ng-template>
+
+<app-child [acceptingReset]="reset" (citiesEvent)="receiveMessage($event)"></app-child>
+</div>

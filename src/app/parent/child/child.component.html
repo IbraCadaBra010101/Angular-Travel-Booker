@@ -1,0 +1,11 @@
+
+<div class="btn-container">
+ 
+  <button type="button" [ngClass] = "romeClicked ? 'btn btn-outline-primary':'btn btn-primary'" (click)="showRome($event)">Rome</button>
+  <button type="button" [ngClass] = "athensClicked ? 'btn btn-outline-primary':'btn btn-primary'" (click)="showAthens($event)">Athens</button>
+  <button type="button" [ngClass] = "berlinClicked ? 'btn btn-outline-primary':'btn btn-primary'" (click)="showBerlin($event)">Berlin</button>
+  <button type="button" [ngClass] = "mexicoCityClicked ? 'btn btn-outline-primary':'btn btn-primary'" (click)="showMexicoCity($event)">Mexico City</button>
+  <button class="btn btn-danger" [ngClass] = "resetClicked ? 'btn btn-outline-primary':'btn btn-danger'" (click)="showDefault()">Reset</button>
+ </div>
+
+<!--<div>{{cities[0].info}}</div>-->

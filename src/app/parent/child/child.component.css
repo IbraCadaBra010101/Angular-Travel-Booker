@@ -1,0 +1,17 @@
+.btn-container{
+
+   margin: 0 auto;
+   max-width: 900px;
+   height: 45px;
+   background-color: white;
+   border-radius: 3px;
+ }
+.pressed{
+  margin: 45px;
+  background-color: #71a2b5;
+  border-color: black;
+  border-radius: 10px;
+}
+button{
+  margin: 45px;
+ }

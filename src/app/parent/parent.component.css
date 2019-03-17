@@ -1,0 +1,14 @@
+
+.card
+{
+  border-color: black;
+  color: #6d6d6d;
+  margin: 0 auto;
+  max-width: 600px;
+  height: 400px;
+  background-color: #fcfcfc;
+  border-radius: 5px;
+}
+.container{
+  margin: 55px;
+}
